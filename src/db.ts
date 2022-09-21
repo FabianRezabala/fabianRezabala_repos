@@ -1,4 +1,4 @@
-import {DataSource} from 'typeorm';
+import { DataSource } from 'typeorm';
 import { URL } from "url";
 import { Metrics } from './entities/Metrics';
 import {Organization }from './entities/Organization'
