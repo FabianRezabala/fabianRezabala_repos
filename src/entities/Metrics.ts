@@ -6,7 +6,7 @@ export class Metrics extends BaseEntity {
     @PrimaryGeneratedColumn()
     id_repository: number;
     
-    @Column("double")
+    @Column()
     coverage: number;
 
     @Column()

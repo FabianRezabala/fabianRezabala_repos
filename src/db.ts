@@ -19,6 +19,6 @@ export const AppDataSource = new DataSource({
   },
   logging: true,
   entities: [Organization, Tribe, Repositories, Metrics],
-  //synchronize: true
+  synchronize: false
 
 });

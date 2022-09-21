@@ -10,10 +10,8 @@ export class Organization extends BaseEntity {
     @Column({length: 50})
     name: string;
 
-    @Column({
-        default: true
-    })
-    status: boolean;
+    @Column()
+    status: number;
 
     // @OneToMany(()=> Tribe, tribe => tribe.organization)
     // tribes: Tribe[]; 

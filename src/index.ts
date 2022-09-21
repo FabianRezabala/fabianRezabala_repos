@@ -6,8 +6,10 @@ async function main(){
     try{
         await AppDataSource.initialize();
         console.log('Base de datos conectada');
-        app.listen(3000);
-        console.log(`Escuchando en el puerto`);
+        app.listen(3000, ()=>{
+            console.log(`Servidor Iniciado`);
+        });
+        
     }catch(error){
         console.error(error);
     }
