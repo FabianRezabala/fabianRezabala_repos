@@ -37,7 +37,13 @@ export const createOrganization = async (req: Request, res: Response)=>{
 export const getAll = async (req: Request, res: Response) => {
     try {
         const organization = await Organization.find();
+
+        if (organization.length === 0) {
+            return res.status(200).json({msg: 'No existe todavia ninguna organizacion'});
+        }
+
         return res.json(organization);
+
     } catch (error) {
         if (error instanceof Error){
             return res.status(500).json({msg: error.message});
