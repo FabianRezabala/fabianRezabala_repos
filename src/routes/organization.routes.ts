@@ -3,14 +3,14 @@ import {createOrganization, deleteOrganization, getAll, getOrganization, updateO
 
 const router = Router();
 
-router.get('/organization', getAll);
+router.get('/api/organization', getAll);
 
-router.get('/organization/:id', getOrganization);
+router.get('/api/organization/:id', getOrganization);
 
-router.post('/organization', createOrganization);
+router.post('/api/organization', createOrganization);
 
-router.put('/organization/:id', updateOrganization);
+router.put('/api/organization/:id', updateOrganization);
 
-router.delete('/organization/:id', deleteOrganization);
+router.delete('/api/organization/:id', deleteOrganization);
 
 export default router;
