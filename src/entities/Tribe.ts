@@ -1,5 +1,6 @@
-import {BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
+import {BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import { Organization } from './Organization';
+import { Repositorie } from './Repositorie';
 
 @Entity()
 export class Tribe extends BaseEntity {
@@ -15,6 +16,10 @@ export class Tribe extends BaseEntity {
     })
     status: boolean;
 
-    // @ManyToOne(() => Organization, organization => organization.tribes)
-    // organization: Organization;
+    @ManyToOne(() => Organization, (organization) => organization.tribes)
+    organization: Organization;
+
+    @OneToMany(() => Repositorie, (repositorie) => repositorie.tribe)
+    repositories: Repositorie[]; 
+
 }
